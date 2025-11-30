@@ -51,10 +51,6 @@ Professional school theme (Navy Blue + Gold)
 
 **Password:** 123
 
-*(If no login is required, remove this section)*
-
----
-
 ## 🚀 Deployment Link (Mandatory)
-Live Project Link:  
+Live Project Link:  https://garvit2047.github.io/School-management-web-page/
 
