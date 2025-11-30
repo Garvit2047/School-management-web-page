@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiv Jyoti Convent School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>Shiv Jyoti Convent School</h1>
+            <p>"Truth, Knowledge, and Discipline"</p>
+        </div>
+    </header>
+
+    <nav>
+        <button class="nav-btn active" onclick="showSection('home')">Home</button>
+        <button class="nav-btn" onclick="showSection('admissions')">New Admission</button>
+        <button class="nav-btn" onclick="showSection('library')">e-Library</button>
+        <button class="nav-btn" onclick="showSection('contact')">Contact Us</button>
+    </nav>
+
+    <main class="container">
+
+        <section id="home" class="page-section active">
+            <div class="hero-box">
+                <h2>Welcome to Academic Excellence</h2>
+                <p>Nurturing future leaders since 1995. We provide world-class education with a focus on moral values.</p>
+            </div>
+
+            <div class="notice-board">
+                <h3>📢 School Notice Board</h3>
+                <ul>
+                    <li><strong>Admission Alert:</strong> Forms for 2025-26 are now available online.</li>
+                    <li><strong>Holiday:</strong> School remains closed this Friday for Gandhi Jayanti.</li>
+                    <li><strong>Sports:</strong> Football trials for Class 9-12 begin next week.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="admissions" class="page-section hidden">
+            <h2>Admission Registration (2025-26)</h2>
+            <div class="form-container">
+                <form id="admissionForm">
+                    <div class="input-group">
+                        <label>Student Name</label>
+                        <input type="text" id="studentName" required placeholder="Full Name">
+                    </div>
+                    <div class="input-group">
+                        <label>Father's Name</label>
+                        <input type="text" required placeholder="Father's Name">
+                    </div>
+                    <div class="input-group">
+                        <label>Class Applying For</label>
+                        <select id="studentClass">
+                            <option>Nursery</option>
+                            <option>Primary (1-5)</option>
+                            <option>Middle (6-8)</option>
+                            <option>High School (9-10)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="number" required placeholder="10-digit Mobile No">
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Application</button>
+                </form>
+                <div id="successMessage" class="success-msg hidden">
+                    ✅ Application Submitted! We will contact you shortly.
+                </div>
+            </div>
+        </section>
+
+        <section id="library" class="page-section hidden">
+            <h2>School Digital Library</h2>
+            
+            <div id="libraryLogin">
+                <div class="login-card">
+                    <h3>Student Login</h3>
+                    <p class="hint">User: student | Pass: 123</p>
+                    <input type="text" id="libUser" placeholder="Username">
+                    <input type="password" id="libPass" placeholder="Password">
+                    <button onclick="libraryLogin()" class="btn-primary">Login</button>
+                    <p id="loginError" class="error-text hidden">Invalid Credentials!</p>
+                </div>
+            </div>
+
+            <div id="libraryDashboard" class="hidden">
+                <div class="lib-header">
+                    <h3>Available Books</h3>
+                    <button onclick="libraryLogout()" class="btn-danger">Logout</button>
+                </div>
+                <div id="bookList" class="book-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section hidden">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p><strong>📍 Address:</strong> Shiv Jyoti Campus, mahaveer nagar ext.,kota</p>
+                <p><strong>📞 Phone:</strong> +91 98765 00000</p>
+                <p><strong>✉️ Email:</strong> office@shivjyoti.edu</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shiv Jyoti Convent School - School Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
